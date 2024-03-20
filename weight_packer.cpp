@@ -177,7 +177,8 @@ void repackQWeightByName(FILE *fp, char* fileNameBase, const char* weightName, s
     char filename[512];
     sprintf(filename, "%s.%s.qweight.bin", fileNameBase, weightName);
     getFileContents(qweight, filename, orig_qweight_bytes);
-    sprintf(filename, "%s.%s.qzeros.bin", fileNameBase, weightName);
+    //sprintf(filename, "%s.%s.qzeros.bin", fileNameBase, weightName);
+    sprintf(filename, "%s.%s.scaled_zeros.bin", fileNameBase, weightName);
     getFileContents(qzeros, filename, orig_qzeros_bytes);
     sprintf(filename, "%s.%s.scales.bin", fileNameBase, weightName);
     getFileContents(scales, filename, orig_scales_bytes);
