@@ -1,0 +1,14 @@
+{
+    "cmake.debugConfig": {
+        "args": [
+            "/hy-tmp/awq_cache/chinese-alpaca-2-7b-hf-w4-g128-awq-v2-awq-q4.bin",
+            "-z",
+            "\"/root/wjx/llama_cu_awq/tokenizer.bin\"",
+            "-n",
+            "256",
+            "-i",
+            "\"write an essay about GPUs\""
+        ]
+    },
+    "cmake.configureOnOpen": true
+}
