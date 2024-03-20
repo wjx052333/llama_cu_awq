@@ -367,7 +367,7 @@ void run_transformer(bool gen_token, Config* p, RunState* s, TransformerWeights*
         cudaStreamBeginCapture(stream, cudaStreamCaptureModeGlobal);
         run_llama_network(s->pos, p, s, w, seq_len_bin);
         cudaStreamEndCapture(stream, &graph);
-        cudaGraphInstantiate(&cudaGraphInstance[graphIndex], graph, 0);
+        cudaGraphInstantiateWithFlags(&cudaGraphInstance[graphIndex], graph, 0);
         cudaGraphDestroy(graph);
         graphCaptured[graphIndex] = true;
     }
